@@ -1,0 +1,1 @@
+This project is about creating a clone of the Google homepage.
