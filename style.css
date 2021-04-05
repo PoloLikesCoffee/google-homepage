@@ -2,13 +2,25 @@ body {
     margin:0;
     padding:0;
     width: 100vw;
-    min-width: 100%;
+    /*min-width: 100%;*/
     height: 100vh;
-    min-height: 100%;
+    /*min-height: 100%;*/
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
     display:flex;
     flex-direction:column;
+}
+
+@media (min-width: 1300px) {
+    body {
+        font-size: 16px;
+    }
+  }
+  
+@media (max-width: 850px) {
+    body {
+        font-size: 12px;
+    }
 }
 
 #navbar-top {
@@ -63,12 +75,45 @@ body {
     padding: 5px 0px 5px 0px;
 }
 
+@media (max-width: 850px) {
+    #google-logo {
+        padding-top: 10px;
+    }
+
+    #google-logo img {
+        max-width: 70vw;
+    }
+  }
+
 #search-bar {
+    width: 50%;
     padding: 17px 0px 17px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+@media (max-width: 850px) {
+    #search-bar {
+        width:80%;
+    }
+}
+
+@media (min-width: 1300px) {
+    #search-bar {
+        width:40%;
+    }
+  }
+
 #search-bar #query {
-    width: 45vw;
+    width: 90%;
     height: 46px;
     border-radius: 25px;
     border: 1px solid rgb(220, 220, 220, 0.9);
@@ -85,9 +130,9 @@ body {
 }
 
 #main-button {
-    display:flex;
-    justify-content: center;
     padding: 28px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
 }
 
 #main-button #button1 {
@@ -137,9 +182,9 @@ body {
 }
 
 #country {
-    font-size: 15px;
+    font-size: 14px;
     color: rgba(116, 116, 116, 0.801);
-    margin: 14px 30px 14px 30px;;
+    margin: 14px 30px 14px 30px;
 }
 
 #footer-bottom #line-footer {
@@ -148,14 +193,14 @@ body {
     border: none;
 }
 
-#footer-bottom #footer-nav {
+#footer-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 #footer-nav {
-    font-size: 15px;
+    font-size: 13px;
     margin: 14px 30px 14px 30px;
 }
 
@@ -168,10 +213,44 @@ body {
     text-decoration-line: underline;
 }
 
+#nav-left {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #nav-left a {
     margin-right: 30px;
 }
 
 #nav-right a {
     margin-left: 30px;
+}
+
+@media (min-width: 1300px) {
+    #country {
+        font-size: 15px;
+    }
+
+    #footer-nav {
+        font-size: 15px;
+    }
+  }
+
+@media (max-width: 850px) {
+    #footer-nav {
+        flex-direction: column;
+    }
+
+    #nav-left, #nav-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    #nav-left a {
+        margin: 5px 20px 5px 20px;
+    } 
+    
+    #nav-right a {
+        margin: 5px 20px 5px 20px;
+    }
 }
